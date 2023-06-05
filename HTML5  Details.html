@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML5 Features</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    ul {
+      margin-bottom: 20px;
+    }
+
+    .red {
+      color: red;
+    }
+
+    .blue {
+      color: blue;
+    }
+
+    .green {
+      color: green;
+    }
+
+    .orange {
+      color: orange;
+    }
+
+    .purple {
+      color: purple;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML5 Features</h1>
+
+    <h2>Structural Elements</h2>
+    <header>
+      <h3>Header</h3>
+    </header>
+    <nav>
+      <h3>Nav</h3>
+    </nav>
+    <section>
+      <h3>Section</h3>
+    </section>
+    <article>
+      <h3>Article</h3>
+    </article>
+    <aside>
+      <h3>Aside</h3>
+    </aside>
+    <footer>
+      <h3>Footer</h3>
+    </footer>
+
+    <h2>Text Elements</h2>
+    <p>Paragraph</p>
+    <h3>Heading 3</h3>
+    <a href="#">Link</a>
+    <strong>Strong</strong>
+    <em>Emphasis</em>
+    <code>Code</code>
+
+    <h2>List Elements</h2>
+    <ul>
+      <li>Unordered List Item 1</li>
+      <li>Unordered List Item 2</li>
+      <li>Unordered List Item 3</li>
+    </ul>
+    <ol>
+      <li>Ordered List Item 1</li>
+      <li>Ordered List Item 2</li>
+      <li>Ordered List Item 3</li>
+    </ol>
+
+    <h2>Form Elements</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name">
+      <br>
+      <label for="email">Email:</label>
+      <input type="email" id="email">
+      <br>
+      <label for="password">Password:</label>
+      <input type="password" id="password">
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+
+    <h2>Media Elements</h2>
+    <img src="image.jpg" alt="Image">
+    <br>
+    <video width="400" controls>
+      <source src="video.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    <br>
+    <audio controls>
+      <source src="audio.mp3" type="audio/mp3">
+      Your browser does not support HTML5 audio.
+    </audio>
+
+    <h2>Canvas</h2>
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid black;"></canvas>
+    <script>
+      var canvas = document.getElementById("myCanvas");
+      var ctx = canvas.getContext("2d");
+      ctx.font = "30px Arial";
+      ctx.fillText("Hello, Canvas!", 10, 50);
+    </script>
+
+    <h2>Geolocation</h2>
+    <button onclick="getLocation()">Get Location</button>
+    <p id="demo"></p>
+    <script>
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+          document.getElementById("demo").innerHTML = "Geolocation is not supported by this browser.";
+        }
+      }
+
+      function showPosition(position) {
+        document.getElementById("demo").innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+      }
+    </script>
+
+    <h2>Local Storage</h2>
+    <p>Enter your name:</p>
+    <input type="text" id="nameInput">
+    <button onclick="saveName()">Save Name</button>
+    <p id="displayName"></p>
+    <script>
+      function saveName() {
+        var name = document.getElementById("nameInput").value;
+        localStorage.setItem("name", name);
+        document.getElementById("displayName").innerHTML = "Your name is: " + localStorage.getItem("name");
+      }
+    </script>
+  </div>
+</body>
+</html>
