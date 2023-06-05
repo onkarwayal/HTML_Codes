@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Apple</title>
+  <style>
+    /* Reset some default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 5px 10px;
+    }
+
+    section {
+      max-width: 1200px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 40px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    section h2 {
+      margin-bottom: 20px;
+    }
+
+    .product-card {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: scale(1.02);
+    }
+
+    .product-card img {
+      max-width: 150px;
+      margin-right: 20px;
+    }
+
+    .product-card h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .product-card p {
+      color: #888;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Apple</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Support</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h2>Welcome to Apple</h2>
+    <div class="product-card">
+      <img src="iphone.jpg" alt="iPhone">
+      <div>
+        <h3>iPhone</h3>
+        <p>The revolutionary iPhone with advanced features.</p>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="macbook.jpg" alt="MacBook">
+      <div>
+        <h3>MacBook</h3>
+        <p>The powerful MacBook for your professional needs.</p>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="airpods.jpg" alt="AirPods">
+      <div>
+        <h3>AirPods</h3>
+        <p>The wireless AirPods for seamless audio experience.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2022 Apple Inc. All rights reserved.</p>
+  </footer> 
+</body>
+</html>
